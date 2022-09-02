@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "#!/bin/bash \n chmod ug+x, o+r hello" > 6-multiple_permissions
+echo "#!/bin/bash \n chmod a+x hello" > 7-everybody
+echo "#!/bin/bash \n chmod 007 hello" > 8-James_Bond
+echo "#!/bin/bash \n chmod 753 hello" > 9-John_Doe
+echo "#!/bin/bash \n chmod --reference=olleh hello" > 10-mirror_permissions
+echo "#!/bin/bash \n chmod a+x *" > 11-directories_permissions
+echo "#!/bin/bash \n mkdir -m 751 my_dir" > 12-directory_permissions
+echo "#!/bin/bash \n chgrp school hello" > 13-change_group
+
+chmod u+x *
+
+git add .
+
+git commit -m "add task 6 to 13"
