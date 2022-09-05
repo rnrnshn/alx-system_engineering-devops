@@ -1,1 +1,2 @@
-#!/bin/bash \ngrep -c bin /etc/passwd
+#!/bin/bash
+grep -c bin /etc/passwd
