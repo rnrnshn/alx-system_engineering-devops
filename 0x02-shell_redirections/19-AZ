@@ -1,0 +1,1 @@
+#!/bin/bash \ntr 'A' 'Z' | tr 'c' 'e'

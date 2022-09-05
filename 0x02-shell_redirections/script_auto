@@ -1,0 +1,50 @@
+#!/bin/bash
+
+echo "#!/bin/bash \n cat /etc/passwd" > 2-hellofile
+
+echo "#!/bin/bash \n cat /etc/passwd /etc/hosts" > 3-twofiles
+
+echo "#!/bin/bash \n tail /etc/passwd" > 4-lastlines
+
+echo "#!/bin/bash \n head /etc/passwd" > 5-firstlines
+
+echo "#!/bin/bash \nhead -3 iacta | tail -1" > 6-third_line
+
+echo "#!/bin/bash \nls -la > ls_cwd_content" > 8-cwd_state
+
+echo "#!/bin/bash \ntail -1 < iacta >> iacta" > 9-duplicate_last_line
+
+echo "#!/bin/bash \nfind -name "*.js" -type f -delete" > 10-no_more_js
+
+echo "#!/bin/bash \nfind . -type d ! -path . -print | wc -l" > 11-directories
+
+echo "#!/bin/bash \nls -1t | head -10" > 12-newest_files
+
+echo "#!/bin/bash \nsort | uniq -u" > 13-unique
+
+echo "#!/bin/bash \ngrep "root" /etc/passwd" > 14-findthatword
+
+echo "#!/bin/bash \ngrep -c "bin" /etc/passwd" > 15-countthatword
+
+echo "#!/bin/bash \ngrep -A 3 "root" /etc/passwd" > 16-whatsnext
+
+echo "#!/bin/bash \ngrep -v "bin" /etc/passwd" > 17-hidethisword
+
+echo "#!/bin/bash \ngrep ^[[:alpha:]] /etc/ssh/sshd_config" > 18-letteronly
+
+echo "#!/bin/bash \ntr 'A' 'Z' | tr 'c' 'e'" > 19-AZ
+
+echo "#!/bin/bash \ntr -d 'c' | tr -d 'C'" > 20-hiago
+
+echo "#!/bin/bash \nrev" > 21-reverse
+
+echo "#!/bin/bash \nsort /etc/passwd | cut -d':' -f 1,6" > 22-users_and_homes
+
+chmod u+x *
+
+git add .
+
+git commit -m "add all the scripts automicatlly"
+
+
+

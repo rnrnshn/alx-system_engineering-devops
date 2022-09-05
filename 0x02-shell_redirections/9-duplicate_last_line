@@ -1,0 +1,1 @@
+#!/bin/bash \ntail -1 < iacta >> iacta
